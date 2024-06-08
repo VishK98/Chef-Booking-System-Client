@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProfileRightComponent.css';
 import { Link } from 'react-router-dom';
 import BookedSessionCards from './BookedSessionCards';
@@ -16,8 +16,18 @@ const ProfileRightComponent = ({
 }) => {
   const [selectedLink, setSelectedLink] = useState(1);
 
+  // Load the selected tab from localStorage when the component mounts
+  useEffect(() => {
+    const savedSelectedLink = localStorage.getItem('selectedLink');
+    if (savedSelectedLink) {
+      setSelectedLink(Number(savedSelectedLink));
+    }
+  }, []);
+
   const handleLinkClick = (button) => {
     setSelectedLink(button);
+    localStorage.setItem('selectedLink', button);
+    // Save the selected tab to localStorage
   };
 
   return (

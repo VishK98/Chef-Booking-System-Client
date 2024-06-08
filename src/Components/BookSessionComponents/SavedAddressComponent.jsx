@@ -5,7 +5,6 @@ import axios from 'axios';
 
 const SavedAddressComponent = ({ name, address }) => {
   const [isFormVisible, setIsFormVisible] = useState(false);
-  const [currentAddress, setCurrentAddress] = useState(address);
 
   const isAddressSet = (value) => {
     return value !== '' && value;
@@ -30,8 +29,8 @@ const SavedAddressComponent = ({ name, address }) => {
         .then((response) => {
           console.log('Delete request successful');
           console.log(response.data);
-          // Update the state to remove the deleted address
-          setCurrentAddress(null);
+          window.location.reload();
+          localStorage.setItem('afterUpdate', 'true');
         })
         .catch((error) => {
           console.error('Error deleting address:', error);
@@ -45,17 +44,15 @@ const SavedAddressComponent = ({ name, address }) => {
     setIsFormVisible(!isFormVisible);
   };
 
-  const handleUpdateSuccess = (updatedAddress) => {
-    // Update the state with the updated address
-    setCurrentAddress(updatedAddress);
-    setIsFormVisible(false);
+  const handleUpdateSuccess = () => {
+    window.location.reload();
   };
 
-  // Conditionally render the address details or a blank div
   const renderAddressDetails = () => {
-    if (!currentAddress) {
-      return <div style={{ marginBottom: '30px' }}>No address available.</div>; // Render a message if address is null
+    if (!address) {
+      return <div></div>; // Render a blank div if address is null
     }
+
     return (
       <div className='saved-address-card'>
         <div className='button-container'>
@@ -64,18 +61,18 @@ const SavedAddressComponent = ({ name, address }) => {
         </div>
         <div className='address-details'>
           <p>
-            {currentAddress.addressLine}
-            {isAddressSet(currentAddress.addressLine) ? ',' : ''}
+            {address.addressLine}
+            {isAddressSet(address.addressLine) ? ',' : ''}
           </p>
           <p>
-            {currentAddress.city}
-            {isAddressSet(currentAddress.city) ? ',' : ''}
+            {address.city}
+            {isAddressSet(address.city) ? ',' : ''}
           </p>
           <p>
-            {currentAddress.zipCode}
-            {isAddressSet(currentAddress.zipCode) ? ',' : ''}
+            {address.zipCode}
+            {isAddressSet(address.zipCode) ? ',' : ''}
           </p>
-          <p>{currentAddress.state}</p>
+          <p>{address.state}</p>
         </div>
         <div className='edit-address-buttons-div'>
           <button className='edit-address-button' onClick={editButton}>
@@ -100,10 +97,10 @@ const SavedAddressComponent = ({ name, address }) => {
         <AddressForm
           isAddressGiven={isAddressSet(address?.addressLine)}
           setIsAddressGiven={() => {}}
-          address={currentAddress}
-          setAddress={setCurrentAddress}
+          address={address}
+          setAddress={() => {}}
           toggle={toggleFormVisibility}
-          onUpdateSuccess={handleUpdateSuccess}
+          onUpdateSuccess={handleUpdateSuccess} // Pass the callback function
         />
       )}
     </div>

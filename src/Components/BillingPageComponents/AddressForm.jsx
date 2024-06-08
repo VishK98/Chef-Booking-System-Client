@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import './AddressForm.css';
 import axios from 'axios';
 import AddressAutosuggest from '../AddressAutoSuggest';
@@ -21,42 +21,6 @@ const AddressForm = (props) => {
     toggle,
     onUpdateSuccess,
   } = props;
-
-  useEffect(() => {
-    if (address) {
-      setFormData({
-        phoneNumber: address.phoneNumber || '',
-        addressLine: address.addressLine || '',
-        city: address.city || '',
-        state: address.state || '',
-        zipCode: address.zipCode || '',
-      });
-    } else {
-      const fetchData = async () => {
-        try {
-          const response = await axios.post(
-            `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/users/getaddress`,
-            {},
-            {
-              headers: {
-                Authorization: `Bearer ${localStorage.getItem('cowToken')}`,
-              },
-            }
-          );
-          setFormData({
-            phoneNumber: response.data.phoneNumber,
-            addressLine: response.data.address.addressLine,
-            city: response.data.address.city,
-            state: response.data.address.state,
-            zipCode: response.data.address.zipCode,
-          });
-        } catch (error) {
-          console.error('Error fetching address:', error);
-        }
-      };
-      fetchData();
-    }
-  }, [address]);
 
   const handleInputChange = (e) => {
     setIsAddressUpdated(true);
@@ -81,7 +45,13 @@ const AddressForm = (props) => {
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/users/postaddress`,
-        formData,
+        {
+          phoneNumber: formData.phoneNumber,
+          addressLine: formData.addressLine,
+          city: formData.city,
+          state: formData.state,
+          zipCode: formData.zipCode,
+        },
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('cowToken')}`,
@@ -89,21 +59,49 @@ const AddressForm = (props) => {
         }
       );
       setIsAddressGiven(true);
-      const updatedAddress = {
+      setAddress({
         ...address,
         phoneNumber: formData.phoneNumber,
         addressLine: formData.addressLine,
         city: formData.city,
         state: formData.state,
         zipCode: formData.zipCode,
-      };
-      setAddress(updatedAddress);
-      onUpdateSuccess(updatedAddress); // Call the callback function on successful update with the updated address
+      });
+      onUpdateSuccess();
+      localStorage.setItem('afterUpdate', 'true');
+      console.log('afterUpdate set to true');
     } catch (error) {
       console.error('Error updating address.', error);
     }
     toggle();
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.post(
+          `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/users/getaddress`,
+          {},
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem('cowToken')}`,
+            },
+          }
+        );
+        setFormData({
+          ...formData,
+          phoneNumber: response.data.phoneNumber,
+          addressLine: response.data.address.addressLine,
+          city: response.data.address.city,
+          state: response.data.address.state,
+          zipCode: response.data.address.zipCode,
+        });
+      } catch (error) {
+        console.error('Error fetching address:', error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const setAddressUpdated = ({ addressLine, city, state, zipCode }) => {
     setIsAddressUpdated(true);
@@ -143,12 +141,14 @@ const AddressForm = (props) => {
                 type='text'
                 name='phoneNumber'
                 className='input-field'
-                placeholder='Enter phone number'
+                placeholder={formData.phoneNumber}
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
                 required
               />
-              <AddressAutosuggest setAddress={setAddressUpdated} />
+              <div className='adressinput '>
+                <AddressAutosuggest setAddress={setAddressUpdated} />
+              </div>
             </div>
           </div>
 
@@ -158,7 +158,7 @@ const AddressForm = (props) => {
               type='text'
               name='addressLine'
               className='input-field'
-              placeholder='Enter address line'
+              placeholder={formData.addressLine}
               value={formData.addressLine}
               onChange={handleInputChange}
               required
@@ -172,7 +172,7 @@ const AddressForm = (props) => {
                 type='text'
                 name='city'
                 className='input-field'
-                placeholder='Enter city'
+                placeholder={formData.city}
                 value={formData.city}
                 onChange={handleInputChange}
                 required
@@ -184,7 +184,7 @@ const AddressForm = (props) => {
                 type='text'
                 name='state'
                 className='input-field'
-                placeholder='Enter state'
+                placeholder={formData.state}
                 value={formData.state}
                 onChange={handleInputChange}
                 required
@@ -196,7 +196,7 @@ const AddressForm = (props) => {
                 type='text'
                 name='zipCode'
                 className='input-field'
-                placeholder='Enter zip code'
+                placeholder={formData.zipCode}
                 value={formData.zipCode}
                 onChange={handleInputChange}
                 required
@@ -207,7 +207,6 @@ const AddressForm = (props) => {
             Cancel
           </button>
           <button
-            type='submit'
             className='update-address-button'
             disabled={!isAddressUpdated}
           >

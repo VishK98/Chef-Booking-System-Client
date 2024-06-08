@@ -6,7 +6,6 @@ import ProfileRightComponent from '../../Components/BookSessionComponents/Profil
 import UserLoginForm from '../../Components/UserLoginWeb/UserLoginForm';
 import axios from 'axios';
 import MobileNavBar from '../../Components/Mobile_Nav/MobileNav';
-// import Footer from '../../Components/Footer';
 import UserNavBar from '../../Components/CommonComponents/UserNavBar';
 import { Spinner } from 'react-bootstrap';
 
@@ -103,6 +102,20 @@ const UserProfilePage = ({
     };
     if (isLoggedIn) fetchUserAndBookingInfos();
   }, [isLoggedIn]);
+
+  useEffect(() => {
+    console.log('I AM HERE');
+    const afterUpdate = localStorage.getItem('afterUpdate');
+    console.log('afterUpdate value:', afterUpdate);
+    if (afterUpdate === 'true') {
+      localStorage.setItem('selectedLink', 2);
+      setTimeout(() => {
+        localStorage.removeItem('afterUpdate');
+      }, 1000);
+    } else {
+      localStorage.setItem('selectedLink', 1);
+    }
+  }, []);
 
   return (
     <>
