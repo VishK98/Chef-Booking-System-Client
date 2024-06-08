@@ -1,0 +1,59 @@
+.footer-landing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 1440px;
+  height: fit-content;
+  padding: 0 60px;
+  background-color: #107569;
+  color: #fff;
+}
+
+.App-logo-footer-landing {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+.App-name-footer-landing {
+  font-size: 22px;
+  font-weight: 250;
+  margin-right: 5px;
+}
+
+.footer-left-side-landing {
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 250;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 14px;
+  font-size: 12px !important;
+  display: flex;
+}
+
+.footer-middle-side-landing {
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 250;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-top: 14px;
+  font-size: 12px !important;
+  display: contents;
+}
+
+.footer-right-side-landing {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.footer-right-side-landing svg {
+  margin-left: 10px;
+}

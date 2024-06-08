@@ -1,0 +1,30 @@
+/* .landing-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10vh;
+  overflow-y: auto;
+  max-height: calc(120vh - 252px);
+  opacity: 1;
+}
+
+.landing-page-container::-webkit-scrollbar {
+  display: none;
+}
+
+.landing-page-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.fill-div {
+  height: 20px;
+}
+
+@media screen and (max-width: 786px) {
+  .landing-page-container {
+    margin-left: 2%;
+    margin-right: 2%;
+    gap: 5vh;
+  }
+} */

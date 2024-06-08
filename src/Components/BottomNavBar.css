@@ -1,0 +1,99 @@
+.bottom-navbar {
+  display: none;
+}
+
+@media screen and (max-width: 786px) {
+  .bottom-navbar {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    color: teal;
+    padding: 10px 0;
+    bottom: 0;
+    position: fixed;
+  }
+
+  .bottom-navbar a {
+    cursor: pointer;
+  }
+
+  .nav-item-house {
+    text-decoration: none;
+    width: 52px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+    /* Inherit text color from parent */
+  }
+
+  .nav-item-session {
+    width: 52px;
+    height: 42px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+    /* Inherit text color from parent */
+  }
+  .nav-item-search {
+    width: 52px;
+    height: 42px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+    /* Inherit text color from parent */
+  }
+
+  .nav-item-search {
+    width: 42px;
+    height: 42px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+    /* Inherit text color from parent */
+  }
+  .nav-item-search img {
+    height: 18px;
+    width: 18px;
+  }
+
+  .nav-item-account {
+    width: 52px;
+    height: 42px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+    /* Inherit text color from parent */
+  }
+
+  .nav-item:hover {
+    color: #ef6820;
+    /* Change the hover color as needed */
+  }
+
+  .icon {
+    width: 18px;
+    height: 18.73px;
+    top: 2.27px;
+    left: 3px;
+    margin-bottom: 5px;
+    /* Adjust margin as needed */
+    color: teal;
+  }
+
+  .active {
+    color: #ef6820;
+  }
+}

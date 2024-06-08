@@ -1,0 +1,36 @@
+.NavMobileLogo img {
+  width: 40px;
+  height: 40px;
+}
+.NavMobileLogo span {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  /* text-align: left; */
+  color: #101828;
+}
+/* .NavMobileLogo {
+  width: 334px;
+  height: 40px;
+  top: 60px;
+  left: 20px;
+  gap: 65px;
+  opacity: 0px;
+  background-color: aqua;
+} */
+@media screen and (max-width: 786px) {
+  .NavMobileLogo {
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    margin: 1.875em 0.938em;
+    /* gap: 65px; */
+  }
+  .mobile_textnav {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,115 @@
+.bill-details-container {
+  /* padding: 20px; */
+  padding-left: 0;
+  border-radius: 5px;
+}
+.bill-details-header {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #101828;
+  padding-bottom: 8px;
+}
+
+.selected-dishes-billing {
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.selected-dish-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.selected-dish-card img {
+  width: 83px;
+  height: 53px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.selected-dish-card p {
+  margin: 0;
+}
+
+.dish-name-billing {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.no-items-selected {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.adult-count-billing {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.people-details {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.dish-subtotal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid #0a0a0b;
+}
+
+.dish-subtotal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dish-subtotal > div {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.dish-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dish-total > div {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.booking-conditions {
+  font-size: 12px;
+  font-weight: 450;
+  max-width: 350px;
+  color: #ef6820;
+  font-style: italic;
+}
+@media screen and (max-width: 786px) {
+  .bill-details-container {
+    margin-top: 1rem;
+    padding: 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 1em;
+  }
+  .bill-details-header {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .dish-name-billing {
+    font-size: 1rem;
+  }
+
+  .booking-conditions {
+    max-width: 100%;
+  }
+}

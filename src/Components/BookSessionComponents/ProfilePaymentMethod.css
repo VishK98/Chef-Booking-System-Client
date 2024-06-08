@@ -1,0 +1,17 @@
+.profile-payment-method-container {
+  width: 95%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10% 10px;
+  background-color: rgba(16, 117, 105, 0.1);
+  /* border: 2px solid #7ddacf; */
+}
+
+.profile-payment-method-container p {
+  text-align: center;
+  margin: auto;
+  color: #107569;
+}

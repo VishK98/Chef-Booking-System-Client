@@ -1,0 +1,70 @@
+.chef-profile-card {
+  width: 35%;
+  margin: 2% auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chef-profile-card p {
+  /* margin: 0; */
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.chef-profile-label {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 1%;
+}
+
+.chef-profile-details {
+  margin-bottom: 2%;
+}
+
+.chef-img {
+  display: flex;
+  justify-content: center;
+  flex-basis: content;
+  margin-top: 1%;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.chef-profile-img img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.chef-skills-profile-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 2%;
+}
+
+.chef-skill-pills-profile-page {
+  background-color: #fef6ee;
+  color: #ef6820;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 786px) {
+  .chef-profile-card {
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .chef-profile-details {
+    margin-bottom: 2%;
+  }
+}

@@ -1,0 +1,26 @@
+.BecomeAchef {
+  width: 160px;
+  height: 2.5em;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #99f6e0;
+  opacity: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0fdf9;
+  cursor: pointer;
+  /* margin-left: 2em; */
+}
+.BecomeAchefText {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #107569;
+}
+p {
+  margin-top: initial;
+  margin-bottom: initial;
+}

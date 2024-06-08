@@ -1,0 +1,168 @@
+.App-name {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #107569;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff; /* Add background color as needed */
+  z-index: 1000; /* Ensure the header appears above other content */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+}
+
+.middle {
+  display: flex;
+  align-items: flex-start;
+}
+
+.search-form {
+  display: flex;
+}
+
+.input-group {
+  flex: 1;
+  border-right: 2px solid #99a3b3;
+}
+
+.location {
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #99a3b3;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 60%;
+  min-width: max-content;
+  gap: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0.5rem;
+
+  &:focus-within {
+    border-color: #99a3b3;
+  }
+
+  & > select,
+  & > input {
+    flex: 1;
+    border: none;
+    outline: none;
+  }
+
+  & > svg {
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+
+    &:first-child {
+      stroke: #107569;
+    }
+  }
+
+  & > select {
+    cursor: pointer;
+  }
+}
+
+.left {
+  margin-left: 3%;
+}
+
+.right {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 4%;
+}
+
+.login-button {
+  background-color: rgba(16, 117, 105, 0.1);
+  border: 2px solid #7ddacf;
+  color: #107569;
+  padding: 8px 40px;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.book-session-button {
+  background-color: #107569;
+  color: white;
+  padding: 8px 20px;
+  border: 2px solid #107569;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 2s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  background-color: #107569;
+  color: white;
+  padding: 20px;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+}
+
+.footer .left {
+  display: flex;
+  align-items: center;
+}
+
+.footer .left .App-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.footer .left .App-name {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.footer .middle p {
+  margin: 0;
+}
+
+.footer .right {
+  display: flex;
+  align-items: center;
+}
+
+.footer .right svg {
+  margin-left: 10px;
+  color: white;
+  cursor: pointer;
+}

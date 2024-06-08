@@ -1,0 +1,355 @@
+/* .chefs-scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  padding: 10px;
+}
+
+.chefs-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.chefs-scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chef-card {
+  margin: 1em;
+}
+
+.chef-inner {
+  width: 335px;
+  height: 285px;
+  gap: 0px;
+  border-radius: 10px 0px 0px 0px;
+  opacity: 0px;
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.chef-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.chef-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(11, 11, 11);
+  font-size: 14px;
+  justify-content: flex-end;
+}
+
+.chef-details-container {
+  padding: 10px;
+}
+
+.name-rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+}
+
+.rating-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.chef-name-top-rated {
+  display: inline-block;
+  margin: auto;
+  margin-left: 0;
+  color: black;
+}
+
+.rating-value-top-rated {
+  margin-left: 5px;
+  color: white;
+  color: rgb(0, 0, 0);
+}
+
+hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 3px solid white;
+  background-color: white;
+}
+
+.skills-container {
+  max-height: 3em;
+  overflow-y: hidden;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.more-skills {
+  color: gray;
+}
+
+.hidden-skills {
+  display: none;
+}
+
+.navigation-headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.param-headers {
+  font-size: 20px;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.navigation-buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.calendar-icon-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 5px;
+}
+
+.navigation-arrow {
+  cursor: pointer;
+}
+
+.rating-chef {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 786px) {
+  .chef-inner {
+    width: 167px;
+  }
+  .chefs-scroll-container > .chef-card {
+    width: 90vw;
+    max-height: 170px;
+  }
+
+  .chef-name-top-rated {
+    font-size: 0.7rem;
+  }
+
+  .chef-details-container {
+    padding: 5px;
+  }
+
+  .skills-container {
+    overflow: visible;
+    font-size: 10px;
+  }
+
+  .rating-value-top-rated {
+    display: flex;
+    font-size: 1rem;
+  }
+
+  .calendar-icon-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 5px;
+  }
+
+  .rating-top-rated-chef {
+    display: flex;
+    font-size: small;
+  }
+
+  .chefs-scroll-container {
+    height: 30vh;
+    margin-bottom: 1%;
+  }
+} */
+
+.chefs-scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.chefs-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.chefs-scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* .chef-card {
+  position: relative;
+} */
+
+.chef-details-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background-color: rgba(255, 255, 255, 0.8);  */
+  padding: 10px;
+  cursor: pointer;
+}
+.chef-inner {
+  width: 335px;
+  height: 285px;
+}
+.top-rated-chefs-row {
+  margin-bottom: 2.5em;
+}
+
+.chef-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  object-position: center; /* Center the image within the container */
+}
+
+.chef-card-toprated {
+  width: calc(33.33% - 20px);
+  max-width: 299px;
+  margin: 10px;
+  flex-grow: 1;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.chef-image-container {
+  position: relative;
+  width: calc(100% - 32px); /* Account for the 16px gap on each side */
+  height: 285px; /* Set a fixed height or adjust as needed */
+  overflow: hidden;
+  border-radius: 10px; /* Add border radius */
+  /* margin: 16px;  */
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.chef-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+.chef-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 31.5%,
+    rgba(0, 0, 0, 0.8) 70%
+  );
+}
+
+.name-rating-container {
+  display: flex;
+  justify-content: space-between;
+}
+.skills-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.name-rating-container p {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+}
+.rating-value-top-rated {
+  color: #ffffff;
+}
+.skills-container {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 6px;
+  text-align: left;
+}
+
+.horizontal-line {
+  /* Styles for the horizontal line */
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0; /* Adjust the margin as needed */
+}
+
+/* .calendar-icon-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 5px;
+}
+
+.rating-top-rated-chef {
+  display: flex;
+  font-size: small;
+}
+
+.chefs-scroll-container {
+  height: 30vh;
+  margin-bottom: 1%;
+} */
+.navigation-headers-top-rated {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+}
+
+.navigation-buttons-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  /* width: 64px; */
+}
+@media (max-width: 768px) {
+  .chef-card-toprated {
+    width: calc(50% - 20px); /* 2 cards per row on smaller screens */
+  }
+  /* .chef-card-toprated{
+    width: 193px;
+    height: 150px;
+  } */
+  
+}
+
+@media (max-width: 576px) {
+  .chef-card-toprated {
+    width: 100% /* 1 card per row on extra small screens */
+  }
+  /* .chef-card-toprated{
+    width: 193px
+  } */
+  /* .chef-image-container{
+    width: 193px
+  } */
+}

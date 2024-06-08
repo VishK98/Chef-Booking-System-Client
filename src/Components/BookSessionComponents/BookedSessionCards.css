@@ -1,0 +1,343 @@
+.session-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  padding: 1em;
+}
+
+.session-cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.session-card {
+  width: 46%;
+  height: auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  padding-bottom: 1em;
+  background-color: #f9fafb;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.session-chef-bio-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #eaecf0;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.session-chef-image {
+  display: flex;
+  flex-basis: content;
+  align-items: center;
+}
+
+.session-chef-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.booked-session-chef-name {
+  margin: 0%;
+  padding-left: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.session-rating-text {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 450;
+  margin: 0%;
+}
+
+.session-rating-value {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.session-card-details-container {
+  padding: 2px;
+  display: flex;
+  gap: 14px;
+}
+
+.session-details {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.booking-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid #0a0a0b;
+}
+
+.bookings-details-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 400;
+  /* gap: 111px; */
+  max-width: 230px;
+  height: 18px;
+}
+
+.edit-booking-buttons-div {
+  display: flex;
+  /* justify-content: flex-end; */
+  margin-top: 0.5em;
+  /* margin-left: 6rem; */
+}
+
+.reschedule-booking-button {
+  background-color: rgba(16, 117, 105, 0.1);
+  border: 2px solid #7ddacf;
+  color: #107569;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.cancel-booking-button {
+  /* background-color: #f9fafb; */
+  color: #107569;
+  padding: 8px 20px;
+  border: 2px solid #f9fafb;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.otp-booking {
+  display: flex;
+  justify-content: space-between;
+}
+#otp-booking {
+  color: #107569;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+}
+.otp-booking p {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: #101828;
+}
+.service_ends_otp p {
+  color: #101828;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+}
+.service_ends_otp {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+#service_ends_otp {
+  color: #107569;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+}
+.otp_booking_and_end {
+  margin-top: 20px;
+}
+
+.session-in-progress-button {
+  background-color: #fef6ee;
+  color: #ef6820;
+  padding: 8px 20px;
+  border: 2px solid #fef6ee;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-left: 10px;
+  font-weight: 450;
+}
+
+.session-complete-button {
+  background-color: rgb(33, 155, 33);
+  border: 2px solid rgb(33, 155, 33);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 450;
+  margin-left: 10px;
+}
+.Mobile_Sessions {
+  display: none;
+}
+
+/* Add these styles to your existing CSS file */
+.popup_canile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-inner {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 240px;
+  height: 144px;
+}
+.popup-inner p {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  color: #101828;
+}
+
+.popup-buttons {
+  margin-top: 20px;
+  margin-top: 20px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* .popup-button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* .popup-button:hover {
+  background-color: #ddd;
+} */
+#popup_cancile {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  width: 77px;
+  height: 28px;
+  padding: 4px 14px 4px 14px;
+  background-color: #107569;
+  border-radius: 8px;
+  border: none;
+}
+#popup_no {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  width: 77px;
+  height: 28px;
+  padding: 4px 14px 4px 14px;
+  background-color: #99f6e0;
+  border-radius: 8px;
+  border: none;
+}
+
+.canceled-message {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.cancelem {
+  height: 36px;
+  background: red;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cancel-booking-button {
+  background-color: #f2f4f7;
+}
+.bookedimg img {
+  width: 68px;
+  height: 62px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+@media screen and (max-width: 786px) {
+  .session-cards-container {
+    display: block;
+    max-height: calc(100vh - 6em);
+    padding-top: 1%;
+  }
+  .Mobile_Sessions {
+    display: initial;
+  }
+  .session-card {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    padding-bottom: 1em;
+    background-color: #f9fafb;
+    margin-right: 0;
+    margin-bottom: 1.5em;
+  }
+
+  .session-rating-text {
+    display: block;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 450;
+    margin: 0%;
+    width: 100px;
+  }
+
+  .session-rating-value {
+    display: flex;
+  }
+  .booked-session-chef-name {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+  }
+}

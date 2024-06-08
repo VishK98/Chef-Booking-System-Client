@@ -1,0 +1,39 @@
+.booking-session-pills {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.booking-session-pills a {
+  display: inline-block;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 8px 20px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 450;
+  margin-right: 10px;
+  border: 1px solid white;
+}
+
+.booking-session-pills a:hover {
+  cursor: pointer;
+  /* background-color: rgba(16, 117, 105, 0.1); */
+  /* border: 1px solid #7ddacf; */
+}
+
+#selected {
+  background-color: #fef6ee;
+  color: #ef6820;
+  border: 1px solid #fef6ee;
+}
+
+.booking-session-container {
+  height: 100%;
+}
+
+.booking-session-menu-container {
+  padding-top: 4%;
+}

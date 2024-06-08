@@ -1,0 +1,11 @@
+.address-line-booking {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 1em;
+  padding-left: 20px;
+}
+@media screen and (max-width: 786px) {
+  .address-line-booking{
+    padding-left: 0px;
+  }
+}

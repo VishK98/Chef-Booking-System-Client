@@ -1,0 +1,93 @@
+.saved-address-card {
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  max-width: 45%;
+}
+
+.address-card-name {
+  justify-content: center;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 18px;
+  font-weight: 450;
+}
+
+.address-details {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.address-details p {
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.address-details p:last-child {
+  margin-right: 0;
+  flex-basis: 100%;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.button-container button {
+  background-color: #ef6820;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.edit-address-buttons-div {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5em;
+}
+
+.edit-address-button {
+  background-color: rgba(16, 117, 105, 0.1);
+  border: 2px solid #7ddacf;
+  color: #107569;
+  padding: 3px 25px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.delete-address-button {
+  background-color: #f9fafb;
+  color: #107569;
+  padding: 8px 20px;
+  border: 2px solid #f9fafb;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.add-new-address {
+  background-color: #107569;
+  color: white;
+  padding: 8px 20px;
+  border: 2px solid #107569;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 45%;
+}

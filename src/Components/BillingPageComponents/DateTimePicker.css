@@ -1,0 +1,169 @@
+.date-time-picker {
+  padding: 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+  margin-top: 25px;
+}
+
+.date-picker {
+  /* border: 1px solid #ccc; */
+  width: 360px;
+  height: 450px;
+  background-color: #fcfcfd;
+  border-radius: 6px;
+}
+
+.month-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 10px; */
+  height: 56px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.days-of-week {
+  display: flex;
+  height: 48px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.day-of-week {
+  width: 30px;
+  text-align: center;
+  flex: 1;
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.date {
+  width: 30px;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.date > div {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date.past {
+  color: #1d1b20;
+  pointer-events: none;
+}
+
+.date:hover {
+  cursor: pointer;
+}
+.navigation-arrow {
+  width: 24px;
+  height: 24px;
+  color: #49454f;
+}
+
+.time-picker {
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  background-color: #fcfcfd;
+  width: 360px;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border-radius: 6px;
+}
+
+.time-pill {
+  font-size: 14px;
+  display: inline-block;
+  padding: 8px 8px;
+  background-color: white;
+  border: 1px solid #eaecf0;
+  margin-bottom: 16px;
+  margin-left: 15px;
+  cursor: pointer;
+  width: 90px;
+  height: 36px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.selected {
+  color: #ef6820;
+  border: 1px solid #ef6820;
+}
+
+.selected-date {
+  color: #ef6820;
+  border: 1px solid #ef6820;
+  border-radius: 50%;
+}
+.disabled {
+  color: #1d1b20;
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.select-date {
+  color: #344054;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+}
+
+.select-time > p {
+  color: #344054;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+}
+.month-selector span {
+  color: #49454f;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+}
+
+@media screen and (max-width: 786px) {
+  .date-time-picker {
+    width: 100%;
+    flex-direction: column;
+  }
+  .date-picker {
+    width: 100%;
+  }
+  .time-picker {
+    height: 120px;
+    width: 90vw;
+  }
+  .picker {
+    width: 100%;
+    /* padding: 1em; */
+  }
+}

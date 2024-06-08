@@ -1,0 +1,109 @@
+.profile-container-chef {
+  width: 35%;
+  margin: 2% auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-basis: content;
+}
+
+.profile-photo {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  /* Adjust as needed */
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+}
+
+.options-button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add your existing styles here */
+
+/* Styles for the cropper */
+.crop-container {
+  position: relative;
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  /* You can adjust this */
+  background-color: #333;
+}
+
+.crop-button {
+  margin-top: 200px;
+  position: relative;
+  z-index: 20;
+  padding: 5px 15px;
+  border: none;
+  background-color:#fff;
+  cursor: pointer;
+  width: 20%;
+  color: teal;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.slider {
+  width: 80%;
+  /* Adjust the slider width as needed */
+  margin-bottom: 10px;
+}
+
+.upload-button {
+  cursor: pointer;
+  color: teal;
+}
+
+.zoom-button {
+  background-color: white;
+  display: flex;
+  width: 32px;
+  /* Adjust width for smaller buttons */
+  height: 32px;
+  /* Adjust height for smaller buttons */
+  margin: 0;
+  /* No margin for absolutely positioned buttons */
+  /* Further styling as needed */
+}

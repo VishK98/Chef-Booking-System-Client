@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "react-app",
+    "plugin:prettier/recommended",
+    "plugin:css-modules/recommended"
+  ],
+  "plugins": ["react", "css-modules"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react-hooks/rules-of-hooks": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "css-modules/no-unused-class": "off",
+    "css-modules/no-undef-class": "off",
+    "jsx-a11y/anchor-is-valid": "off"
+  }
+}

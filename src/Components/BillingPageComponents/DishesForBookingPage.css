@@ -1,0 +1,258 @@
+/* .listed-dishes-row {
+  width: 750px;
+  position: relative;
+  margin-top: 1.5em;
+  padding: 10px;
+} */
+
+.navigation-headers-dish-booking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: auto;
+  width: 742px;
+}
+
+.param-headers-dishes-for-booking {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+
+  color: #344054;
+}
+
+.navigation-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  /* width: 64px; */
+}
+
+.second-search-bar {
+  display: flex;
+  align-items: flex-end;
+  width: 18vw;
+}
+
+.search-icon {
+  position: relative;
+}
+
+.search-icon > svg {
+  position: absolute;
+  left: 25px;
+  bottom: 2px;
+}
+
+.search-bar2 {
+  background: white;
+  border: 1px solid #99a3b3;
+  border-radius: 8px;
+  padding: 6px 6px 6px 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.search-bar2::focus-within {
+  border-color: #99a3b3;
+}
+
+.navigation-arrow {
+  cursor: pointer;
+}
+
+.dishes-booking-scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+  /* padding: 10px; */
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  gap: 16px;
+  margin-right: 10px;
+}
+
+.dish-card-booking {
+  background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 242px;
+  height: 120px;
+  /* margin-right: 16px; */
+  border-radius: 8px;
+  scroll-snap-align: start;
+}
+
+.dishes-booking-scroll-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+
+.dish-details-booking {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 100%;
+  padding-right: 6px;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.dish-name-booking {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: #101828;
+  overflow-wrap: break-word;
+}
+
+.dish-price-booking {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.dish-add-button {
+  background-color: rgba(16, 117, 105, 0.1);
+  border: 2px solid #7ddacf;
+  color: #107569;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 106px;
+  height: 36px;
+  justify-content: center;
+  text-align: center;
+  margin-right: 3px;
+}
+
+.dish-remove-button {
+  background-color: #fef3f2;
+  border: 2px solid #fecdca;
+  color: #e30613;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 106px;
+  height: 36px;
+  justify-content: center;
+  text-align: center;
+  margin-right: 3px;
+}
+
+.dish-add-disabled-button {
+  background-color: #f9fafb;
+  border: 2px solid #ccc;
+  color: #ccc;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 106px;
+  height: 36px;
+  justify-content: center;
+  text-align: center;
+  margin-right: 3px;
+}
+
+.image-container-dish {
+  position: relative;
+  padding: 10px;
+}
+.image-with-gradient {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.image-container-dish::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 84%;
+  height: 93%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 31.5%,
+    rgba(0, 0, 0, 0.8) 70%
+  );
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 375px) {
+  .navigation-headers {
+    width: 100%;
+    flex-direction: column;
+    height: 24px;
+  }
+  .search-icon {
+    display: none;
+  }
+  .dishes-booking-scroll-container {
+    max-height: 211px;
+    /* margin-top: 50px; */
+    display: grid;
+    /* width: 336px !important; */
+    padding: 0px;
+    width: 100%;
+  }
+  .navigation-buttons {
+    display: none;
+  }
+  .second-search-bar {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .dish-card-booking {
+    width: 100%;
+    height: 65px;
+  }
+  .dish-card-booking img {
+    width: 45px;
+    height: 45px;
+  }
+  .dish-details-booking {
+    flex-direction: row;
+    width: 100%;
+    height: 36px;
+    justify-content: space-between;
+  }
+  .dish-name-booking {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: #101828;
+  }
+  .listed-dishes-row {
+    width: 100%;
+    /* padding: 1em; */
+    margin-top: 0;
+  }
+  .image-container-dish::after {
+    display: none;
+  }
+  .dishes-booking-scroll-container {
+    gap: 8px;
+  }
+}
+@media (width: 375px) and (min-width: 270px) {
+  .listed-dishes-row {
+    width: 100%;
+    padding: 0em;
+    margin-top: 0;
+  }
+  /* .dish-name-booking {
+    font-size: 12px;
+  } */
+}

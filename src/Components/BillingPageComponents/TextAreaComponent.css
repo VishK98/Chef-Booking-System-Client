@@ -1,0 +1,28 @@
+.input-area {
+  width: 750px;
+  padding: 10px;
+  border: 1px solid #d0d5dd;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  font-weight: 450;
+  margin-bottom: 5px;
+}
+
+form > div {
+  padding: 0.1em;
+}
+
+.dietary-restriction {
+  padding: 1em;
+}
+
+@media screen and (max-width: 786px) {
+  .input-area {
+    width: 100%;
+  }
+}

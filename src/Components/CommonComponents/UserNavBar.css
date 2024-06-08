@@ -1,0 +1,243 @@
+.user-header {
+  display: flex;
+  justify-content: space-between; /* Aligns items to the start, center, and end */
+  align-items: center; /* Aligns items vertically */
+  margin: 1.875em 0.938em;
+}
+
+.logo-wrap {
+  min-width: 15.625em;
+  min-height: 3.125em;
+  display: flex;
+}
+
+.user-header > .logo {
+  width: 3.125em;
+  height: 3.125em;
+  margin-right: 0.625em;
+  cursor: pointer;
+}
+
+.user-header .app-name {
+  margin: 0.72em 0;
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+}
+
+/* .user-header .left {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  
+} */
+
+/* .user-header .right {
+  justify-content: end;
+  display: flex;
+  align-items: center;
+} */
+
+.App-name {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #107569;
+  cursor: pointer;
+}
+
+.location {
+  font-size: 1rem;
+  margin: auto;
+}
+
+.login-button {
+  background-color: rgba(16, 117, 105, 0.1);
+  border: 0.125em solid #7ddacf;
+  color: #107569;
+  border-radius: 0.625px;
+}
+
+.dropbtnUser {
+  cursor: pointer;
+}
+
+.user-info-and-become-chef-wrap {
+  display: flex;
+  justify-content: end;
+  /* min-width: 16.75em; */
+  align-items: baseline;
+  gap: 31px;
+}
+.bell-icon {
+  cursor: pointer;
+}
+
+.becomachefpart {
+  min-width: 10.5em;
+}
+
+.autosuggestandsearch {
+  display: flex;
+  height: 2.5em;
+  border-radius: 0.625em;
+  border: 1px solid #d0d5dd;
+  /* margin-left: 2em; */
+  align-items: center;
+  width: 32em;
+  justify-content: center;
+  cursor: pointer;
+}
+.vertical-line {
+  height: 28px;
+  border: 1px solid #d0d5dd;
+  margin-right: 0.9375em;
+}
+
+/* dropdown css */
+
+.dropdown-icon {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.dropdown-menu p:hover {
+  background-color: #f2f2f2;
+}
+
+.dropbtn {
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtnUser:hover,
+.dropbtnUser:focus {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  /* position: relative; */
+  margin-top: 9em;
+  background-color: #f1f1f1;
+  min-width: 160ppx;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+.dropdown-content p {
+  font-size: 14px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-content p:hover {
+  background-color: #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (max-width: 786px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3%;
+    margin-top: 1.5%;
+    margin-bottom: 1em;
+  }
+  .user-header .app-name {
+    display: none;
+  }
+  .search-bar {
+    display: none;
+  }
+  .vertical-line {
+    display: none;
+  }
+  .logo-wrap {
+    min-width: 0em;
+    min-height: 3.125em;
+    display: flex;
+  }
+  .App-name {
+    display: none;
+  }
+  .middle {
+    width: 279px;
+    height: 40px;
+    padding: 10;
+    gap: 6px;
+    border-radius: 8;
+  }
+  /* .right {
+    display: none;
+  } */
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    gap: 6px;
+  }
+  .location {
+    width: 237px;
+    height: 20px;
+    gap: 2px;
+  }
+  .navbar-user-name {
+    display: none;
+    margin: auto;
+    font-weight: 400;
+    font-size: 16;
+  }
+  svg:not(:root).svg-inline--fa {
+    padding: 0px;
+    display: flex;
+    overflow: visible;
+    box-sizing: content-box;
+    margin: 0px;
+    margin-right: 5px;
+  }
+  .autosuggestandsearch {
+    /* margin-left: 0em; */
+    width: 233px;
+  }
+  .autosuggest-input {
+    width: 18px;
+  }
+  .autosuggest-input {
+    width: 220px;
+  }
+  .user-header {
+    display: flex;
+    /* justify-content: normal; */
+    align-items: center;
+    margin: 1.875em 0em;
+    gap: 15px;
+  }
+}

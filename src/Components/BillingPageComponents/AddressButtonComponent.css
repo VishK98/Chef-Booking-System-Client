@@ -1,0 +1,24 @@
+.address-add-button {
+  background-color: #f0fdf9;
+  border: 1px solid #99f6e0;
+  color: #107569;
+  padding: 10px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 36px;
+  text-align: center;
+  margin-right: 3px;
+  width: 718px;
+  font-family: Montserrat;
+  font-weight: 500;
+  line-height: 20px;
+}
+.address-btn-main {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 786px) {
+  .address-add-button {
+    width: 100%;
+  }
+}

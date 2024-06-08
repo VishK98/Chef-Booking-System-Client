@@ -1,0 +1,83 @@
+.booking-session-page-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow-y: auto;
+  /* margin-left: 30px; */
+}
+
+.booking-session-page-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  width: 30vw;
+  padding: 1em;
+}
+
+.booking-session-page-right {
+  border-radius: 5px;
+  padding: 10px;
+  width: 60vw;
+  margin-bottom: 30px;
+}
+
+.log-out-button-account-page {
+  display: none;
+}
+.footer_user {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  margin-top: 10px;
+}
+
+/* UserProfilePage.css */
+
+/* Default styles for desktop view */
+.desktopviewnav {
+  display: block;
+}
+
+.mobileviewnav {
+  display: none;
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 786px) {
+  .desktopviewnav {
+    display: none;
+  }
+
+  .mobileviewnav {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .booking-session-page-main {
+    margin-left: 0px;
+  }
+
+  .booking-session-page-right {
+    display: none;
+  }
+  .booking-session-page-left {
+    margin-top: 0vh;
+    width: 100%;
+    align-items: left;
+  }
+  .log-out-button-account-page {
+    margin-bottom: 50px;
+    width: 20rem;
+    display: block;
+    background-color: #107569;
+    color: white;
+    padding: 0.6rem 4rem;
+    border: 2px solid #107569;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+}

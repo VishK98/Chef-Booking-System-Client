@@ -1,0 +1,159 @@
+.chef-card-chefforbookingpage {
+  /* width: 26em; */
+  /* height: 246px; */
+  border-radius: 1px;
+  border-width: 2px;
+  margin-top: 1em;
+}
+
+.chef-info-chefforbookingpage {
+  display: flex;
+}
+
+.chef-image-chefforbookingpage img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.space-between {
+  display: inline-block;
+  padding-left: 2em; /* Adjust width as needed */
+}
+
+.chef-detail-chefforbookingpage {
+  display: flex;
+  flex-direction: column;
+  width: 276px;
+}
+
+.chef-name-chefforbookingpage {
+  margin-bottom: 5px;
+  /* margin-left: 1px; */
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: left;
+  color: #101828;
+}
+
+.verified-div {
+  display: flex;
+  align-items: center;
+  background-color: #d3f8df;
+  border-radius: 4px;
+  width: 99px;
+  height: 34px;
+  /* margin-top: 10px; */
+}
+.verified-div img {
+  padding: 5px;
+  /* margin: 5px; */
+  width: 36px;
+}
+
+.verified-chefforbookingpage {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  color: #16b364;
+}
+
+.chef-info-right-chefforbookingpage {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-left: 80px;
+  margin-top: 30px;
+}
+
+.chef-rate-chefforbookingpage {
+  margin-right: 20px;
+  align-items: flex-end;
+}
+
+.chef-rating-chefforbookingpage {
+  color: #888;
+  font-size: 14px;
+  /* margin-left: 30px;  */
+  font-weight: bold;
+  width: auto; /* Adjust width as necessary */
+  /* You can also try adding the following properties */
+  white-space: nowrap;
+  /* margin-bottom: 30px; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+}
+
+.verifiedinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chef-skills-chefforbookingpage {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.skill-pill-chefforbookingpage {
+  background-color: #f9fafb;
+  color: #101828;
+  border-radius: 6px;
+  padding: 3px 8px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  gap: 3px;
+  font-size: 14px;
+  font-weight: 450;
+}
+
+.add-more-dishes {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+
+  margin-top: 30px;
+}
+@media screen and (max-width: 786px) {
+  .chef-card-chefforbookingpage {
+    width: 100%;
+    margin-top: 0.4em;
+    height: 93px;
+  }
+  .chef-image-chefforbookingpage img {
+    width: 50px;
+    height: 50px;
+  }
+  .chef-name-chefforbookingpage {
+    margin: 0px;
+  }
+  .chef-rating-chefforbookingpage {
+    /* margin-bottom: 30px; */
+    display: flex;
+    margin-left: 0px;
+    font-size: 12px;
+    align-items: center;
+  }
+  .space-between {
+    width: 50px;
+  }
+  .add-more-dishes {
+    display: none;
+  }
+  .chef-skills-chefforbookingpage {
+    display: none;
+  }
+}

@@ -1,0 +1,95 @@
+.autosuggest-container {
+  position: relative;
+  max-width: 400px;
+}
+
+.input-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 18em;
+}
+
+.autosuggest-input {
+  width: 21.0625em;
+  padding: 10px 35px;
+  font-size: 14px;
+  border: none;
+  /* margin-left: 10px; */
+  margin-right: 10px;
+  height: 24px;
+  outline: none;
+  /* size: 14px; */
+  font-weight: 500;
+  color: #98a2b3;
+  font-family: Montserrat;
+}
+
+.input-icon,
+.input-caret {
+  position: absolute;
+  color: #555;
+}
+
+.input-icon {
+  left: 10px;
+}
+
+.input-caret {
+  right: 10px;
+  cursor: pointer;
+}
+
+.suggestions-list {
+  width: 17rem;
+  max-height: 15rem;
+  background: white;
+  border-radius: 0.8rem;
+  position: absolute;
+  left: 0px;
+  overflow: auto;
+  border: 1px solid rgb(207, 207, 207);
+  box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
+  top: 2rem;
+  visibility: visible;
+  opacity: 1;
+  transition:
+    opacity 0.25s ease 0s,
+    top 0.25s ease 0s;
+  z-index: 10;
+  list-style: none;
+  margin-top: 0.5em;
+  padding-left: 0;
+}
+
+.input-caret.rotate {
+  transition: transform 0.3s;
+  transform: rotate(180deg);
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  border-radius: 0.8rem;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.detect-location-icon {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 786px) {
+  .autosuggest-input {
+    width: 220px;
+  }
+}
+
+@media (max-width: 374px) {
+  .autosuggest-input {
+    width: 190px;
+  }
+}

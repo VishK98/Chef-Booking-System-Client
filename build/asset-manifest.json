@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dbd7f8c7.css",
+    "main.js": "/static/js/main.4e4b77a1.js",
+    "static/media/onboarding_web_2.png": "/static/media/onboarding_web_2.1ae2385a3b1d95abb232.png",
+    "static/media/homepage1.png": "/static/media/homepage1.1719e303843efde9e83f.png",
+    "static/media/homepage2.png": "/static/media/homepage2.925f0577f301aa62b58f.png",
+    "static/media/homepage3.png": "/static/media/homepage3.069130390283cd8c61e8.png",
+    "static/media/Montserrat-Bold.ttf": "/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
+    "static/media/Montserrat-SemiBold.ttf": "/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
+    "static/media/Montserrat-Medium.ttf": "/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
+    "static/media/Montserrat-Light.ttf": "/static/media/Montserrat-Light.7179b7d2ac9b599db5f9.ttf",
+    "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
+    "static/media/Montserrat-ExtraLight.ttf": "/static/media/Montserrat-ExtraLight.d928d1131a9af02cb672.ttf",
+    "static/media/login-page-image.jpeg": "/static/media/login-page-image.c9a223b62ac94f67512d.jpeg",
+    "static/media/chefa.jpeg": "/static/media/chefa.3b543e7828521ac6e346.jpeg",
+    "static/media/chefd.jpeg": "/static/media/chefd.97109068828024b609e1.jpeg",
+    "static/media/emojiback.svg": "/static/media/emojiback.cb7e94c8fbf984a3fc66.svg",
+    "static/media/chefc.jpeg": "/static/media/chefc.2b16205ef13775c773e8.jpeg",
+    "static/media/chefb.jpeg": "/static/media/chefb.6fc2252245bbaeb9caa4.jpeg",
+    "static/media/logo_no_background.svg": "/static/media/logo_no_background.2e772f08af96b3189ee6cff1893502d6.svg",
+    "index.html": "/index.html",
+    "static/media/filter-lines.svg": "/static/media/filter-lines.0864bb1dc48ca0293a7752d42a1724e2.svg",
+    "main.dbd7f8c7.css.map": "/static/css/main.dbd7f8c7.css.map",
+    "main.4e4b77a1.js.map": "/static/js/main.4e4b77a1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbd7f8c7.css",
+    "static/js/main.4e4b77a1.js"
+  ]
+}

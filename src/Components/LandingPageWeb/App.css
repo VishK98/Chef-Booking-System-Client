@@ -1,0 +1,64 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+} */
+
+/* All CSS styles for the component are defined in this file */
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+}
+
+.content-box {
+  width: 1800px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card p {
+  font-size: 70px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.action-btns {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 50px;
+}
+
+.action-btns button {
+  font-size: 15px;
+  font-weight: 500;
+  color: #002d36;
+  background-color: #99c6cf;
+  border-radius: 6px;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.action-btns button:hover {
+  color: #ffffff;
+  background-color: #002d36;
+}

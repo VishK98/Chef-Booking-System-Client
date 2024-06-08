@@ -1,0 +1,380 @@
+/* .listed-chefs {
+  margin-top: 3%;
+  width: 100%;
+}
+
+.cuisine-fix-header {
+  margin-left: 2%;
+  margin-bottom: 16px;
+}
+
+.cuisine-name-header {
+  font-size: 24px;
+  margin: auto;
+  margin-left: 0;
+}
+
+.cuisine-name-text {
+  font-size: 1.1rem;
+}
+
+.chefs-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-height: calc(100vh - 16.3em);
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chefs-list-container::-webkit-scrollbar {
+  display: none;
+}
+
+.chef-card {
+  position: relative;
+  width: 415px;
+  height: auto;
+  border: 1px solid #eaecf0;
+  border-radius: 10px;
+  background-color: #fcfcfd;
+  display: flex;
+  flex-direction: column;
+}
+
+.chef-bio-top {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.chef-image {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.chef-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.chef-details {
+  padding: 10px;
+  padding-right: 0 !important;
+  margin-left: 5px;
+}
+
+.navigation-arrow-style {
+  color: #ef6820;
+  background-color: #f9fafb;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 5px;
+}
+.yoe-text {
+  margin-top: 8px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.rating-text-chefbycuisine {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.rating-value-chefbycuisine {
+  margin-top: 8px;
+  color: #475467;
+  margin-right: 3px;
+}
+
+.cuisines-and-dishes {
+  font-size: 16px;
+  font-weight: 300;
+  color: #475467;
+  margin-bottom: 5px;
+}
+
+.chef-skills {
+  font-size: 16px;
+  color: #555555;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px !important;
+}
+
+.skill-pill-chefbycuisine {
+  background-color: #f9fafb;
+  color: #344054;
+  padding: 3px 5px;
+  border-radius: 6px;
+  border: 1px solid #eaecf0;
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.rating-pill {
+  background-color: #fef6ee;
+  border: none;
+}
+
+.show-more {
+  background-color: #fcfcfd;
+  color: #ef6820;
+  cursor: pointer;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.chef-listing-page-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cuisine-pills {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cuisine-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.cuisine-pills a {
+  display: inline-block;
+  background-color: #f9fafb;
+  color: #475467;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+  border: 1px solid #eaecf0;
+  margin-right: 10px;
+}
+
+.cuisine-pills a.active {
+  background-color: #fef6ee;
+  color: #ef6820;
+  border: 1px solid #fef6ee;
+}
+
+.booking-section {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: #f2f4f7;
+}
+
+.booking-section-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.booking-section-bottom > p {
+  margin: 0px;
+}
+
+.booking-section-left-side {
+  align-items: end;
+  padding-right: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-items: space-around;
+}
+
+.available-from {
+  padding-left: 1em;
+  color: #667085;
+  font-size: 14px;
+  font-weight: 450;
+  margin-bottom: -5px;
+}
+
+.fa-icon {
+  margin: 0px;
+  padding: 0px;
+}
+
+.slot-time {
+  font-size: 12px;
+  color: #d45f1f;
+  margin: auto;
+}
+
+.book-chef-session-button {
+  padding: 8px 16px;
+  background-color: #107569;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.book-chef-session-button:hover {
+  background-color: #125d56;
+}
+
+.cuisine-name-icon-header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sort-by-button {
+  width: 130px;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+}
+
+.filter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+}
+
+.filter-button > img {
+  padding-right: 2px;
+}
+@media screen and (max-width: 786px) {
+  .cuisine-name-icon-header {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1.4em;
+    padding-bottom: 0.2em;
+  }
+  .cuisine-name-header {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .cuisines-and-dishes {
+    font-size: 0.8rem;
+  }
+  .cuisine-name-text {
+    font-size: 14px;
+    font-weight: 250;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 2px;
+    padding-left: 1.7em;
+  }
+  .navigation-arrow-style {
+    color: #ef6820;
+    background-color: #f9fafb;
+    padding-right: 2px;
+  }
+
+  .header-controls {
+    width: 100%;
+    height: 40px;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-left: 1.5em;
+  }
+  .cuisine-pills {
+    gap: 6px;
+  }
+  .sort-by-button {
+    width: 108px;
+    height: 40px;
+    padding: 8px;
+    gap: 10px;
+    border-radius: 6;
+    border: 1;
+  }
+  .filter-button {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .chef-skills {
+    width: 47px;
+    height: 24px;
+    padding: 3px 4px 3px 4px;
+    gap: 3px;
+    border-radius: 6px;
+    border: 1px;
+  }
+  .chef-card {
+    width: 337px;
+    height: 218px;
+    gap: 12px;
+  }
+  .chef-bio-top {
+    width: 100%;
+    height: 148px;
+    padding: 10px 8px 0px 8px;
+    gap: 8px;
+  }
+  .chef-details {
+    width: 201px;
+    height: 138px;
+    gap: 4px;
+  }
+  .chef-name {
+    font-weight: 350;
+  }
+  .cuisine-fix-header {
+    margin-left: 0;
+  }
+  .booking-section {
+    height: 4.5em;
+    width: 100%;
+    padding: 7px 7px 15px 0px;
+    border-radius: 0px 0px 10px 10px;
+    justify-content: space-between;
+  }
+  .booking-section-left-side {
+   
+    gap: 2px;
+  }
+  .book-chef-session-button {
+    width: 135px;
+    height: 36px;
+    padding: 8px 11px 4px 13px;
+    gap: 8px;
+    border-radius: 8;
+  }
+  .yoe-text {
+    display: none;
+  }
+  .rating-text-chefbycuisine {
+    display: none;
+  }
+} */

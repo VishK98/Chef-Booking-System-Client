@@ -1,0 +1,109 @@
+html {
+  font-size: 16px; /* Set a base font size */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Smaller devices get a smaller base font size */
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px; /* Larger devices get a larger base font size */
+  }
+}
+/* html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'Montserrat';
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 200;
+  src:
+    local('Montserrat'),
+    url(./static/font-static/Montserrat-ExtraLight.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  src:
+    local('Montserrat'),
+    url(./static/font-static/Montserrat-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  src:
+    local('Montserrat'),
+    url(./static/font-static/Montserrat-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 450;
+  src:
+    local('Montserrat'),
+    url(./static/font-static/Montserrat-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  src:
+    local('Montserrat'),
+    url(./static/font-static/Montserrat-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  src:
+    local('Montserrat'),
+    url(./static/font-static/Montserrat-Bold.ttf) format('truetype');
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100%;
+  background-image: url('../src/static/emojiback.svg');
+  background-size: repeat;
+}
+
+.fill-div {
+  background-color: #107569;
+  margin-top: auto;
+}
+
+.Footer {
+  position: absolute;
+  bottom: 0;
+}
+.homepage-body-div {
+  min-height: 100vh;
+}
+@media screen and (max-width: 786px) {
+  .footer {
+    display: none;
+  }
+} */
+.homepage-body-div {
+  min-height: 100vh;
+  overflow: hidden;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+.homepage-body-div::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}

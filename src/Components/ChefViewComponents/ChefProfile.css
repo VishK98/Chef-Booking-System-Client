@@ -1,0 +1,54 @@
+.chef-account-pill {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.chef-account-pill p {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 450;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.chef-view-active {
+  border: 1px solid white;
+  background-color: #fef6ee;
+  color: #ef6820;
+  border: 1px solid #fef6ee;
+}
+
+.chef-logout-button {
+  display: none;
+}
+
+@media screen and (max-width: 786px) {
+  .chef-account-pill {
+    display: none;
+  }
+
+  .chef-logout-button {
+    margin-bottom: 50px;
+    width: 80%;
+    display: block;
+    background-color: #107569;
+    color: white;
+    padding: 0.6rem 4rem;
+    border: 2px solid #107569;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin: auto;
+  }
+
+  .chef-account-view-mobile {
+    min-height: 105vh;
+  }
+}
