@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ProfileLeftComponent.css';
 import userimage from '../../static/chefs/chefb.jpeg';
+import AddressForm from '../../Components/BillingPageComponents/AddressForm';
 
 const EditButtonComponent = (props) => {
   return (
@@ -11,20 +12,19 @@ const EditButtonComponent = (props) => {
 };
 
 const ProfileLeftComponent = ({ name, email, phoneNumber, address }) => {
-  const [additionalInfo, setAdditionalInfo] = useState('');
-  const [additionalAddressInfo, setAdditionalAddressInfo] = useState('');
-  const [additionalPhoneNumberInfo, setAdditionalPhoneNumberInfo] =
-    useState('');
-  const [additionalEmailInfo, setAdditionalEmailInfo] = useState('');
+  const [isFormVisible, setIsFormVisible] = useState(false);
 
   const isAddressSet = (value) => {
     return value !== '' && value;
   };
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    // Handle form submission if needed
-  }
+  const toggleFormVisibility = () => {
+    setIsFormVisible(!isFormVisible);
+  };
+
+  const handleUpdateSuccess = () => {
+    window.location.reload();
+  };
 
   return (
     <div className='profile-container'>
@@ -32,7 +32,7 @@ const ProfileLeftComponent = ({ name, email, phoneNumber, address }) => {
         <img src={userimage} alt='User' />
       </div>
       <div className='profile-form-container'>
-        <form onSubmit={handleSubmit} className='profile-form'>
+        <div className='profile-form'>
           <div className='profile-form-group'>
             <label htmlFor='name'>Name</label>
             <div className='form-box'>
@@ -80,9 +80,19 @@ const ProfileLeftComponent = ({ name, email, phoneNumber, address }) => {
               </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
-      <EditButtonComponent />
+      <EditButtonComponent toggle={toggleFormVisibility} />
+      {isFormVisible && (
+        <AddressForm
+          isAddressGiven={isAddressSet(address?.addressLine)}
+          setIsAddressGiven={() => {}}
+          address={address}
+          setAddress={() => {}}
+          toggle={toggleFormVisibility}
+          onUpdateSuccess={handleUpdateSuccess}
+        />
+      )}
     </div>
   );
 };
