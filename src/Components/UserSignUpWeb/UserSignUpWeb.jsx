@@ -65,7 +65,7 @@ const UserSignUpWeb = ({}) => {
 
   const validatePassword = (password) => {
     const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[^\s]{8,}$/;
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#@$!%*?&])[^\s]{8,}$/;
     return passwordRegex.test(password);
   };
 
@@ -264,20 +264,30 @@ const UserSignUpWeb = ({}) => {
   };
 
   const handleVerification = async (e) => {
+    console.log('I am here to verify otp');
     setShowLoader(true);
+
+    // Transform formData to use sentOtp instead of otp
+    const { otp, ...rest } = formData;
     const newFormData = {
-      ...formData,
+      ...rest,
+      sentOtp: otp,
       email: formData.email.toLowerCase(),
     };
+
+    console.log(newFormData); // Log the transformed formData
+
     try {
       let verificationResponse = await axios.post(
-        `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/users/verify`,
+        // `${process.env.REACT_APP_BACKEND_ENDPOINT}/api/users/verify`,
+        `http://localhost:8080/api/users/verify`,
         newFormData
       );
       if (
         verificationResponse.status === 200 ||
         verificationResponse.status === 201
       ) {
+        console.log('API Response:', verificationResponse);
         const userName = verificationResponse.data.userName;
         const authHeader = verificationResponse.headers['authorization'];
         if (authHeader) {
@@ -287,6 +297,7 @@ const UserSignUpWeb = ({}) => {
           localStorage.setItem('cowToken', token);
           localStorage.setItem('cowUserName', userName);
           setIsOTPsent(false);
+          navigate('/login');
         } else {
           setShowLoader(false);
           console.error('Authorization header not found in response');
@@ -296,10 +307,7 @@ const UserSignUpWeb = ({}) => {
       }
     } catch (err) {
       setShowLoader(false);
-      console.error(
-        `Error ${tryingToLogIn ? 'logging in' : 'signing up'} user:`,
-        err
-      );
+      console.error(`Error signing up user:`, err);
     }
   };
 
@@ -457,6 +465,29 @@ const UserSignUpWeb = ({}) => {
               )}
             </>
           )}
+          <p className='otp-sent-text'>{otpSentText}</p>
+
+          {((!tryingToLogIn && isOTPsent) ||
+            (tryingToLogIn && resetOTPsent)) && (
+            <Form.Group controlId='otp'>
+              <div className='form-text-label-group'>
+                <Form.Label id='otp_margin'>One Time Password</Form.Label>
+                <Form.Control
+                  type='text'
+                  placeholder='OTP'
+                  value={formData.otp}
+                  onChange={(e) => {
+                    setFormData({
+                      ...formData,
+                      otp: e.target.value,
+                    });
+                    setOtpInputFilled(e.target.value.length === 6);
+                  }}
+                  required
+                />
+              </div>
+            </Form.Group>
+          )}
           <div className='submit-button'>
             {!isOTPsent && !resetOTPsent && (
               <button
@@ -474,7 +505,12 @@ const UserSignUpWeb = ({}) => {
               </button>
             )}
             {(isOTPsent || resetOTPsent) && (
-              <button type='submit' disabled={!otpInputFilled}>
+              <button
+                id='forget_paas'
+                type='submit'
+                onClick={handleVerification}
+                disabled={!otpInputFilled}
+              >
                 {!showLoader ? (
                   'Verify OTP'
                 ) : (
